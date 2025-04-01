@@ -1,0 +1,259 @@
+/* Добавьте эти стили в конец файла App.css */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: #343333;
+  }
+  
+  .app {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .todo-form {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .todo-form input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+  }
+  
+  .todo-form button {
+    padding: 10px 20px;
+    background-color: #1a4224;
+    border: solid rgb(15, 67, 26) 1px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.7s ease;
+  }
+  
+  .todo-form button:hover {
+    background-color: #2a6939;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .filters button {
+    padding: 5px 15px;
+    border: 1px solid #ffffff;
+    background-color: rgb(233, 233, 233);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    transition: color 0.7s ease;
+  }
+  .filters button:hover{
+    background-color: #367b47;
+    color: white;
+    border-color: rgb(50, 136, 69)
+  }
+  
+  .filters button.active {
+    background-color: #1a4224;
+    color: white;
+    border-color: rgb(6, 93, 25);
+    transition: background-color 0.7s ease;
+  }
+  .filters button.active:hover{
+    background-color: #0e2a15;
+    color: white;
+    border-color: rgb(10, 45, 17);
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #414040;
+    border: solid rgb(96, 96, 96) 0.5px;
+    border-radius: 9px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-item.completed {
+    opacity: 0.95;
+  }
+  
+  .todo-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .todo-text {
+    flex-grow: 1;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #ffffff;
+  }
+  
+  .todo-date {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  .todo-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .edit-form input {
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+  }
+  
+  .edit-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit {
+    background-color: #282828;
+    color: white;
+    border: solid rgb(97, 97, 97) 1px;
+    transition: background-color 0.7s ease;
+    transition: color 0.7s ease;
+  }
+  .edit:hover{
+    background-color: #848484;
+    color: rgb(0, 0, 0);
+    border: solid rgb(59, 59, 59) 1px;
+  }
+  
+  .delete {
+    background-color: #860900;
+    border: solid rgb(117, 6, 6) 1px;
+    color: white;
+    transition: background-color 0.7s ease;
+    transition: color 0.7s ease;
+  }
+  .delete:hover{
+    background-color: #d30909;
+    border: solid rgb(202, 10, 10) 1px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .save {
+    background-color: #1a4224;
+    color: white;
+    transition: background-color 0.7s ease;
+  }
+  .save:hover{
+    background-color: #2a6939;
+    
+  }
+  .cancel {
+    background-color: #282828;
+    color: white;
+    transition: background-color 0.7s ease;
+    transition: color 0.7s ease;
+  }
+  .cancel:hover{
+    background-color: #848484;
+    color: rgb(0, 0, 0);
+  }
+  
+  .empty-message {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+  }
+  
+  .stats {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+  }
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 5px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #b9b9b9;
+  }
+  
+  .pagination button.active {
+    background-color: #1a4224;
+    color: white;
+    border-color: #134414;
+  }
+  .pagination button.active:hover{
+    background-color: #0b2211;
+    border-color: #081d08;
+  }
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
