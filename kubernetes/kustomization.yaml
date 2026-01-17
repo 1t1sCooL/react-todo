@@ -4,9 +4,9 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
 
 images:
   - name: react-todo-app
     newName: react-todo-app
     newTag: latest
+
